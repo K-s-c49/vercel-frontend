@@ -37,7 +37,7 @@ function Navbar() {
           <a class="nav-link active" aria-current="page" href="/products">Product</a>
         </li>
            <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About</a>
+          <a class="nav-link active" aria-current="page" href="/about">About</a>
         </li>
       </ul>
       <div class="d-flex ms-auto gap-2">

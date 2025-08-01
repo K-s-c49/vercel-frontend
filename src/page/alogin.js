@@ -4,8 +4,8 @@ import axios from "axios";
 // ✅ React component for Admin Login
 function Alogin(){
   // State to hold email and password
-  const [email, setEmail] = useState("khushal02@gmail.com"); // default email
-  const [password, setPassword] = useState("123");      // default password
+  const [email, setEmail] = useState("khushalsingh7773@gmail.com"); // default email
+  const [password, setPassword] = useState("");      // default password
   const [error, setError] = useState("");                     // to show login error
 
   // 🔐 Function to handle login form submission

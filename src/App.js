@@ -17,6 +17,7 @@ import AdminDashboard from './page/adminDashboard.js';
 import AdminProductList from './page/AdminProductList.js';
 import Alogin from './page/alogin.js';
 import AdminAddProduct from './page/adminproductadd.js';
+import About from './components/about.js';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -71,6 +72,12 @@ function App() {
             </>
           }
         />
+         <Route path="/about" 
+         element={<>
+         <Navbar/>
+         <About />
+         <Footer/>
+         </>} />
       </Routes>
     </BrowserRouter>
   );
