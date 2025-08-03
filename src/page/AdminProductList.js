@@ -9,7 +9,7 @@ function AdminProductList() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`${apiUrl}/api/products`);
+      const res = await axios.get(`${apiUrl}/products`);
       setProducts(res.data);
     } catch (err) {
       console.error("Failed to load products");
