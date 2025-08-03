@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+ export const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function AdminProductList() {
   const [products, setProducts] = useState([]);
@@ -7,7 +9,7 @@ function AdminProductList() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get(`${apiUrl}/api/products`);
       setProducts(res.data);
     } catch (err) {
       console.error("Failed to load products");
@@ -16,7 +18,7 @@ function AdminProductList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`${apiUrl}/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchProducts(); // Refresh list

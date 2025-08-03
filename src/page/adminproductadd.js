@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "./AdminProductList";
 
 function AdminAddProduct() {
   // Form state to hold product data
@@ -29,7 +30,7 @@ function AdminAddProduct() {
     e.preventDefault();
     try {
       // Send POST request to create new product
-      await axios.post("http://localhost:5000/api/products", product, {
+      await axios.post(`${apiUrl}/products`, product, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
