@@ -19,7 +19,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
+      const res = await axios.post("https://backend-626x.onrender.com/api/login", formData);
       const { token, user } = res.data;
 
       localStorage.setItem("token", token);
