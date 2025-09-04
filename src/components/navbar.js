@@ -9,7 +9,7 @@ function Navbar() {
   // ✅ Logout Handler
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:5000/api/logout");
+      await axios.post("https://backend-626x.onrender.com/api/logout");
       toast.success("Logout successful!", { autoClose: 2000 });
 
       localStorage.removeItem("user"); // remove user from storage
