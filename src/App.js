@@ -1,23 +1,24 @@
-// App.js
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 // Components
-import Navbar from './components/navbar.js';
-import Banner from './components/banner.js';
-import Cards from './components/card.js';
-import Carddetail from './components/carddetails.js';
-import Footer from './components/footer.js';
-import Signup from './components/signup.js';
-import Login from './components/login.js';
+import Navbar from "./components/navbar.js";
+import Banner from "./components/banner.js";
+import Cards from "./components/card.js";
+import Carddetail from "./components/carddetails.js";
+import Footer from "./components/footer.js";
+import Signup from "./components/signup.js";
+import Login from "./components/login.js";
+import About from "./components/about.js";
+import Bill from "./components/bill.js";
+import Profile from "./components/profile.js";
 
 // Admin Pages
-import AdminDashboard from './page/adminDashboard.js';
-import AdminProductList from './page/AdminProductList.js';
-import Alogin from './page/alogin.js';
-import AdminAddProduct from './page/adminproductadd.js';
-import About from './components/about.js';
+import AdminDashboard from "./page/adminDashboard.js";
+import AdminProductList from "./page/AdminProductList.js";
+import AdminAddProduct from "./page/adminproductadd.js";
+import Alogin from "./page/alogin.js";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -25,19 +26,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Registration Page */}
+        {/* ========== User Auth ========== */}
         <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
 
-        {/* Admin Pages */}
+        {/* ========== Admin Routes ========== */}
         <Route path="/admin-login" element={<Alogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/products" element={<AdminProductList />} />
         <Route path="/admin/products/new" element={<AdminAddProduct />} />
 
-        {/* Login Page */}
-        <Route path="/login" element={<Login />} />
-
-        {/* Home Page */}
+        {/* ========== Main User Pages ========== */}
         <Route
           path="/home"
           element={
@@ -49,7 +48,6 @@ function App() {
           }
         />
 
-        {/* Products Page */}
         <Route
           path="/products"
           element={
@@ -61,7 +59,6 @@ function App() {
           }
         />
 
-        {/* Cart Page */}
         <Route
           path="/cart"
           element={
@@ -72,12 +69,39 @@ function App() {
             </>
           }
         />
-         <Route path="/about" 
-         element={<>
-         <Navbar/>
-         <About />
-         <Footer/>
-         </>} />
+
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <>
+              <Navbar />
+              <Profile />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/bill"
+          element={
+            <>
+              <Navbar />
+              <Bill />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
