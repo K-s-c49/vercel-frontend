@@ -6,7 +6,7 @@ function Cards({ cart, setCart }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://backend-626x.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
