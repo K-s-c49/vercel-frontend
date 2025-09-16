@@ -1,15 +1,16 @@
+/* ProductSlider.css */
+
 .product-slider-container {
-  max-width: 1500px;
-  margin: 40px auto;
-  padding: 0 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .slider-title {
-  font-family: "Amazon Ember", Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #232f3e;
+  text-align: center;
+  font-size: 2rem;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .slider-card-wrapper {
@@ -18,82 +19,110 @@
 }
 
 .slider-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  background-color: #fff;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
-  height: 100%;
-}
-
-.slider-card:hover {
-  transform: scale(1.02);
+  justify-content: space-between;
 }
 
 .slider-image-container {
   width: 100%;
-  height: 200px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  padding-top: 75%; /* 4:3 aspect ratio */
+  position: relative;
+  overflow: hidden;
 }
 
 .slider-image {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider-info {
-  flex: 1;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  gap: 10px;
+  flex-grow: 1;
 }
 
 .slider-product-name {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #0f1111;
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .slider-description {
   font-size: 0.9rem;
-  color: #555;
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: #666;
+  flex-grow: 1;
 }
 
 .slider-bottom-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .slider-price {
   font-size: 1.1rem;
-  font-weight: 700;
-  color: #B12704;
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 .slider-add-button {
-  background: #FFD814;
-  border: 1px solid #FCD200;
-  color: #0F1111;
-  font-weight: 600;
-  border-radius: 4px;
   padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .slider-add-button:hover {
-  background: #F7CA00;
+  background-color: #0056b3;
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  .slider-title {
+    font-size: 1.5rem;
+  }
+
+  .slider-product-name {
+    font-size: 1rem;
+  }
+
+  .slider-description {
+    font-size: 0.85rem;
+  }
+
+  .slider-add-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-info {
+    padding: 10px;
+  }
+
+  .slider-title {
+    font-size: 1.3rem;
+  }
+
+  .slider-price {
+    font-size: 1rem;
+  }
 }
