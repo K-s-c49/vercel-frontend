@@ -22,7 +22,7 @@ function About() {
             {/* Image block */}
             <div className="col-lg-6 text-center">
               <img
-                src="./logo.png"
+                src="./teamlogo.png"
                 alt="Our Team"
                 className="img-fluid rounded-4 shadow-lg about-img"
               />

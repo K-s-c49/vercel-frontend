@@ -17,7 +17,7 @@ function Profile() {
     if (!token) return;
 
     axios
-      .get("http://localhost:5000/api/users/me", {
+      .get("https://backend-626x.onrender.com/api/users/me", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))

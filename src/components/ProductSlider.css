@@ -1,0 +1,99 @@
+.product-slider-container {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.slider-title {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #232f3e;
+  margin-bottom: 20px;
+}
+
+.slider-card-wrapper {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slider-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.slider-card:hover {
+  transform: scale(1.02);
+}
+
+.slider-image-container {
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.slider-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.slider-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.slider-product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f1111;
+  margin: 0 0 10px 0;
+}
+
+.slider-description {
+  font-size: 0.9rem;
+  color: #555;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.slider-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #B12704;
+}
+
+.slider-add-button {
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  color: #0F1111;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-add-button:hover {
+  background: #F7CA00;
+}

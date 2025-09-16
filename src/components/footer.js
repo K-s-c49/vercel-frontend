@@ -5,12 +5,25 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 function Footer() {
   return (
     <>
-      <footer className="footer-modern text-white pt-5 ">
-        <div className="container text-center text-md-start">
-          <div className="row gy-4">
+      {/* Back to top */}
+      <div
+        className="text-center py-3"
+        style={{ backgroundColor: "#37475A", cursor: "pointer", color: "white" }}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        Back to top
+      </div>
+
+      {/* Main Footer */}
+      <footer
+        className="text-white pt-5 pb-4"
+        style={{ backgroundColor: "#232F3E" }}
+      >
+        <div className="container">
+          <div className="row text-center text-md-start">
             {/* Company Info */}
-            <div className="col-md-3">
-              <h6 className="footer-title">Company</h6>
+            <div className="col-12 col-md-3 mb-4">
+              <h6 className="fw-bold mb-3">Company</h6>
               <p className="small">
                 <span className="text-warning fw-semibold">
                   K&K Shopping Cart System:
@@ -21,8 +34,8 @@ function Footer() {
             </div>
 
             {/* Products */}
-            <div className="col-md-2 text-center text-md-start">
-              <h6 className="footer-title">Products</h6>
+            <div className="col-12 col-md-2 mb-4">
+              <h6 className="fw-bold mb-3">Products</h6>
               <a
                 href="/products"
                 className="d-inline-block overflow-hidden rounded-3 shadow-sm footer-img-wrapper"
@@ -31,15 +44,15 @@ function Footer() {
                   src="./footer.png"
                   alt="Product"
                   className="img-fluid footer-img"
-                  height="10px"
-                  width="200px"
+                  height="10"
+                  width="200"
                 />
               </a>
             </div>
 
             {/* Useful Links */}
-            <div className="col-md-3">
-              <h6 className="footer-title">Useful Links</h6>
+            <div className="col-12 col-md-3 mb-4">
+              <h6 className="fw-bold mb-3">Useful Links</h6>
               <ul className="list-unstyled small">
                 <li>
                   <a href="/profile" className="footer-link">
@@ -65,8 +78,8 @@ function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="col-md-4">
-              <h6 className="footer-title">Contact</h6>
+            <div className="col-12 col-md-4 mb-4">
+              <h6 className="fw-bold mb-3">Contact</h6>
               <p>
                 <i className="fas fa-home me-2 text-warning"></i>12, Rajpalace
                 Complex, Surat (Guj) 395010
@@ -80,7 +93,7 @@ function Footer() {
               </p>
 
               {/* Social icons */}
-              <div className="d-flex gap-3 mt-3">
+              <div className="d-flex gap-3 mt-3 justify-content-center justify-content-md-start">
                 <a href="#" className="social-icon bg-primary">
                   <i className="fab fa-facebook-f"></i>
                 </a>
@@ -97,69 +110,31 @@ function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Footer bottom */}
-        <div className="text-center py-3 border-top border-light mt-5 small">
-          <strong>
-            © {new Date().getFullYear()}{" "}
-            <span className="text-warning">Khushal Singh</span> — All Rights
-            Reserved
-          </strong>
-        </div>
       </footer>
+
+      {/* Bottom Bar */}
+      <div
+        className="text-center py-3"
+        style={{ backgroundColor: "#131A22", color: "#ddd" }}
+      >
+        <small>
+          © {new Date().getFullYear()}{" "}
+          <span className="text-warning">Khushal Singh</span> — All Rights
+          Reserved
+        </small>
+      </div>
 
       {/* Extra Styling */}
       <style jsx="true">{`
-        .footer-modern {
-          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-          position: relative;
-          overflow: hidden;
-        }
-        .footer-modern::before {
-          content: "";
-          position: absolute;
-          top: -50px;
-          left: -50px;
-          width: 200px;
-          height: 200px;
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 50%;
-        }
-        .footer-modern::after {
-          content: "";
-          position: absolute;
-          bottom: -60px;
-          right: -60px;
-          width: 250px;
-          height: 250px;
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 50%;
-        }
-        .footer-title {
-          text-transform: uppercase;
-          font-weight: bold;
-          margin-bottom: 1rem;
-          position: relative;
-        }
-        .footer-title::after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          left: 0;
-          width: 50px;
-          height: 3px;
-          background: #ffc107;
-          border-radius: 2px;
-        }
         .footer-link {
-          color: #f8f9fa;
+          color: #ddd;
           text-decoration: none;
-          display: inline-block;
+          display: block;
           margin: 0.25rem 0;
           transition: color 0.2s ease;
         }
         .footer-link:hover {
-          color: #ffc107;
+          color: #fff;
         }
         .footer-img-wrapper {
           transition: transform 0.3s ease;

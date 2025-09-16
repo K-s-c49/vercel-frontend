@@ -50,78 +50,124 @@ const Signup = () => {
 
   return (
     <div
-      className="d-flex align-items-center justify-content-center min-vh-100"
+      className="d-flex align-items-center justify-content-center min-vh-100 px-3"
       style={{
-        background: "linear-gradient(135deg, #ff9a9e, #fad0c4)", // soft pink gradient
+        background: "linear-gradient(135deg, #f8f8f8ff, #fad0c4)", // soft pink gradient
       }}
     >
       <div
-        className="card shadow-lg border-0 p-4 w-100"
+        className="card shadow-sm border-0 p-4 w-100"
         style={{
-          maxWidth: "420px",
-          borderRadius: "15px",
+          maxWidth: "400px",
+          borderRadius: "10px",
           background: "white",
         }}
       >
-        {/* Brand / Logo */}
-        <div className="text-center mb-4">
+        {/* Logo + Title */}
+        <div className="text-center mb-3">
           <img
             src="./logo.png"
             alt="logo"
-            style={{ width: "70px", marginBottom: "10px" }}
+            className="img-fluid"
+            style={{ width: "70px", maxWidth: "100%", marginBottom: "10px" }}
           />
-          <h3 style={{ fontWeight: "bold", color: "#ff416c" }}>Create Account</h3>
-          <p className="text-muted">Sign up to start shopping with us</p>
+          <h3
+            style={{
+              fontWeight: "bold",
+              color: "#ff416c",
+              fontSize: "1.5rem",
+            }}
+          >
+            Create Account
+          </h3>
+          <p className="text-muted small">Sign up to start shopping with us</p>
         </div>
 
         {/* Signup Form */}
-        <form onSubmit={handleSubmit} className="needs-validation" noValidate>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="mb-3">
+            <label
+              htmlFor="name"
+              className="form-label"
+              style={{ fontSize: "0.9rem", fontWeight: "600" }}
+            >
+              Name
+            </label>
             <input
               type="text"
               name="name"
-              placeholder="Name"
-              className="form-control rounded-pill px-3 py-2"
+              id="name"
+              placeholder="Enter your name"
+              className="form-control px-3 py-2"
               value={form.name}
               onChange={handleChange}
               required
-              style={{ border: "1px solid #ccc" }}
+              style={{
+                border: "1px solid #ccc",
+                borderRadius: "6px",
+                fontSize: "0.9rem",
+              }}
             />
           </div>
           <div className="mb-3">
+            <label
+              htmlFor="email"
+              className="form-label"
+              style={{ fontSize: "0.9rem", fontWeight: "600" }}
+            >
+              Email
+            </label>
             <input
               type="email"
               name="email"
-              placeholder="Email"
-              className="form-control rounded-pill px-3 py-2"
+              id="email"
+              placeholder="Enter your email"
+              className="form-control px-3 py-2"
               value={form.email}
               onChange={handleChange}
               required
-              style={{ border: "1px solid #ccc" }}
+              style={{
+                border: "1px solid #ccc",
+                borderRadius: "6px",
+                fontSize: "0.9rem",
+              }}
             />
           </div>
           <div className="mb-3">
+            <label
+              htmlFor="password"
+              className="form-label"
+              style={{ fontSize: "0.9rem", fontWeight: "600" }}
+            >
+              Password
+            </label>
             <input
               type="password"
               name="password"
-              placeholder="Password"
-              className="form-control rounded-pill px-3 py-2"
+              id="password"
+              placeholder="Enter your password"
+              className="form-control px-3 py-2"
               value={form.password}
               onChange={handleChange}
               required
-              style={{ border: "1px solid #ccc" }}
+              style={{
+                border: "1px solid #ccc",
+                borderRadius: "6px",
+                fontSize: "0.9rem",
+              }}
             />
           </div>
 
-          {/* Submit Button */}
+          {/* Register Button */}
           <button
             type="submit"
-            className="btn w-100 rounded-pill py-2"
+            className="btn w-100 py-2"
             style={{
-              background: "linear-gradient(90deg, #ff416c, #ff4b2b)", // gradient button
+              background: "linear-gradient(90deg, #ff416c, #ff4b2b)",
               color: "white",
               fontWeight: "bold",
-              letterSpacing: "0.5px",
+              borderRadius: "6px",
+              fontSize: "0.95rem",
               border: "none",
             }}
           >
@@ -131,14 +177,14 @@ const Signup = () => {
           {/* Link to Login */}
           <div className="text-center mt-3">
             <span className="small text-muted">Already have an account? </span>
-            <a href="/login" style={{ color: "#ff416c", fontWeight: "600" }}>
+            <a href="/login" style={{ color: "#a44e6bff", fontWeight: "600" }}>
               Login
             </a>
           </div>
         </form>
 
         <ToastContainer />
-        {error && <p className="text-danger mt-3 text-center">{error}</p>}
+        {error && <p className="text-danger mt-3 text-center small">{error}</p>}
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ import AdminDashboard from "./page/adminDashboard.js";
 import AdminProductList from "./page/AdminProductList.js";
 import AdminAddProduct from "./page/adminproductadd.js";
 import Alogin from "./page/alogin.js";
+import ProductSlider from "./components/Slider.js";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -43,6 +44,7 @@ function App() {
             <>
               <Navbar />
               <Banner />
+              <ProductSlider />
               <Footer />
             </>
           }

@@ -24,10 +24,11 @@ function Navbar() {
 
   return (
     <>
+      {/* Amazon-like Navbar */}
       <nav
-        className="navbar navbar-expand-lg shadow-sm"
+        className="navbar navbar-expand-lg navbar-dark shadow-sm"
         style={{
-          background: "linear-gradient(90deg, #1e3c72, #2a5298)", // Blue gradient
+          backgroundColor: "#131921", // Amazon dark theme
         }}
       >
         <div className="container-fluid">
@@ -53,13 +54,12 @@ function Navbar() {
                 letterSpacing: "1px",
               }}
             >
-              Shree-sai
-            </span>
+                </span>
           </a>
 
           {/* ✅ Toggler */}
           <button
-            className="navbar-toggler"
+            className="navbar-toggler border-0"
             type="button"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
@@ -74,12 +74,16 @@ function Navbar() {
             id="navbarNavDropdown"
           >
             <ul className="navbar-nav ms-auto text-center">
-              {["Home", "Products", "About", "Profile"].map((item) => (
+              {["Home", "Products", "About","Cart","Profile"].map((item) => (
                 <li className="nav-item" key={item}>
                   <a
-                    className="nav-link px-3 text-light fw-semibold"
+                    className="nav-link px-3 fw-semibold"
                     href={`/${item.toLowerCase()}`}
-                    style={{ transition: "0.3s" }}
+                    style={{
+                      color: "white",
+                      transition: "0.3s",
+                      fontSize: "0.95rem",
+                    }}
                     onMouseEnter={(e) => (e.target.style.color = "#FFD700")}
                     onMouseLeave={(e) => (e.target.style.color = "white")}
                   >
@@ -96,14 +100,16 @@ function Navbar() {
                 onClick={handleLogout}
                 className="btn"
                 style={{
-                  background: "linear-gradient(90deg, #ff416c, #ff4b2b)",
-                  color: "white",
+                  backgroundColor: "#febd69", // Amazon button color
+                  color: "#111",
                   fontWeight: "bold",
                   border: "none",
+                  borderRadius: "4px",
+                  padding: "6px 16px",
                   transition: "0.3s",
                 }}
-                onMouseEnter={(e) => (e.target.style.opacity = "0.8")}
-                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+                onMouseEnter={(e) => (e.target.style.backgroundColor = "#f3a847")}
+                onMouseLeave={(e) => (e.target.style.backgroundColor = "#febd69")}
               >
                 Logout
               </button>
