@@ -1,18 +1,31 @@
+<<<<<<< HEAD
 /* ==== Container ==== */
+=======
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 .product-slider-container {
   max-width: 1500px;
   margin: 40px auto;
   padding: 0 20px;
+<<<<<<< HEAD
   box-sizing: border-box;
+=======
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 .slider-title {
   font-family: "Amazon Ember", Arial, sans-serif;
+<<<<<<< HEAD
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: 700;
   color: #232f3e;
+=======
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #232f3e;
+  margin-bottom: 20px;
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 /* ==== Card wrapper ==== */
@@ -28,8 +41,17 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   height: 100%;
   transition: transform 0.2s ease;
+=======
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.slider-card:hover {
+  transform: scale(1.02);
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 .slider-card:hover {
@@ -45,7 +67,10 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 .slider-image {
@@ -59,25 +84,37 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   padding: 12px;
   justify-content: space-between;
+=======
+  padding: 10px;
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 .slider-product-name {
   font-size: 1rem;
   font-weight: 600;
   color: #0f1111;
+<<<<<<< HEAD
   margin: 0 0 8px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+=======
+  margin: 0 0 10px 0;
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }
 
 .slider-description {
   font-size: 0.9rem;
   color: #555;
+<<<<<<< HEAD
   flex-grow: 1;
   margin-bottom: 10px;
+=======
+  flex: 1;
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -109,6 +146,7 @@
 
 .slider-add-button:hover {
   background: #F7CA00;
+<<<<<<< HEAD
 }
 
 /* ==== Responsive tweaks ==== */
@@ -150,4 +188,6 @@
     width: 100%; /* ✅ Full width button on mobile */
     text-align: center;
   }
+=======
+>>>>>>> b0b724f92f737e24e2b4059dedc95c350bb6131e
 }

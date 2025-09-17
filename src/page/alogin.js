@@ -14,7 +14,7 @@ function Alogin(){
 
     try {
       // 📨 Send login request to backend API
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://backend-626x.onrender.com/api/auth/login", {
         email,
         password,
       });
