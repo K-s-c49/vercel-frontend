@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./ProductSlider.css";  // Custom styles
+import "./ProductSlider.css";
 
 function ProductSlider({ cart, setCart }) {
   const [products, setProducts] = useState([]);
@@ -17,10 +17,8 @@ function ProductSlider({ cart, setCart }) {
   }, []);
 
   const handleAddToCart = (product) => {
-    if (!Array.isArray(cart)) {
-      console.warn("Cart is not defined properly");
-      return;
-    }
+    if (!Array.isArray(cart)) return;
+
     const exists = cart.find((item) => item._id === product._id);
     if (exists) {
       const updated = cart.map((item) =>
@@ -35,36 +33,35 @@ function ProductSlider({ cart, setCart }) {
     navigate("/cart");
   };
 
-  // Slider settings with autoplay
+  // ✅ Slider settings
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
+    speed: 600,
+    slidesToShow: 4, // default (desktop)
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,            // ✅ Enable autoplay
-    autoplaySpeed: 1000,       // ✅ Slide every 3 seconds
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        }
+        breakpoint: 1200, // Large tablets
+        settings: { slidesToShow: 3 },
       },
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
+        breakpoint: 992, // iPad / medium devices
+        settings: { slidesToShow: 2 },
       },
       {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
+        breakpoint: 768, // Small tablets / phablets
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 576, // Mobile
+        settings: { slidesToShow: 1 },
+      },
+    ],
   };
 
   return (

@@ -1,128 +1,153 @@
-/* ProductSlider.css */
-
+/* ==== Container ==== */
 .product-slider-container {
-  width: 100%;
-  padding: 20px;
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
 .slider-title {
+  font-family: "Amazon Ember", Arial, sans-serif;
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #232f3e;
 }
 
+/* ==== Card wrapper ==== */
 .slider-card-wrapper {
   padding: 10px;
   box-sizing: border-box;
 }
 
 .slider-card {
-  background-color: #fff;
-  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.2s ease;
 }
 
+.slider-card:hover {
+  transform: scale(1.02);
+}
+
+/* ==== Image ==== */
 .slider-image-container {
   width: 100%;
-  padding-top: 75%; /* 4:3 aspect ratio */
-  position: relative;
+  height: 200px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   overflow: hidden;
 }
 
 .slider-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
+/* ==== Info section ==== */
 .slider-info {
-  padding: 15px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
+  padding: 12px;
+  justify-content: space-between;
 }
 
 .slider-product-name {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin: 0;
+  color: #0f1111;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slider-description {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
   flex-grow: 1;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* ==== Bottom row ==== */
 .slider-bottom-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .slider-price {
   font-size: 1.1rem;
-  font-weight: bold;
-  color: #1a1a1a;
+  font-weight: 700;
+  color: #B12704;
 }
 
 .slider-add-button {
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  color: #0F1111;
+  font-weight: 600;
+  border-radius: 4px;
   padding: 8px 12px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  font-size: 0.9rem;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 .slider-add-button:hover {
-  background-color: #0056b3;
+  background: #F7CA00;
 }
 
-/* 📱 Responsive adjustments */
+/* ==== Responsive tweaks ==== */
+@media (max-width: 1200px) {
+  .slider-image-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-image-container {
+    height: 170px;
+  }
+}
+
 @media (max-width: 768px) {
   .slider-title {
     font-size: 1.5rem;
   }
-
-  .slider-product-name {
-    font-size: 1rem;
-  }
-
-  .slider-description {
-    font-size: 0.85rem;
-  }
-
-  .slider-add-button {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+  .slider-image-container {
+    height: 160px;
   }
 }
 
-@media (max-width: 480px) {
-  .slider-info {
-    padding: 10px;
-  }
-
+@media (max-width: 576px) {
   .slider-title {
     font-size: 1.3rem;
   }
-
-  .slider-price {
-    font-size: 1rem;
+  .slider-image-container {
+    height: 140px;
+  }
+  .slider-product-name {
+    font-size: 0.95rem;
+  }
+  .slider-description {
+    display: none; /* Hide description on very small screens */
+  }
+  .slider-add-button {
+    width: 100%; /* ✅ Full width button on mobile */
+    text-align: center;
   }
 }

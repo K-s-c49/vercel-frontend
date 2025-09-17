@@ -20,6 +20,7 @@ import AdminProductList from "./page/AdminProductList.js";
 import AdminAddProduct from "./page/adminproductadd.js";
 import Alogin from "./page/alogin.js";
 import ProductSlider from "./components/Slider.js";
+import EditProduct from "./page/EditProduct.js";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admin-login" element={<Alogin />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/products" element={<AdminProductList />} />
+        <Route path="/admin/products/:id/edit" element={<EditProduct />} />
         <Route path="/admin/products/new" element={<AdminAddProduct />} />
 
         {/* ========== Main User Pages ========== */}

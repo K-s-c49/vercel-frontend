@@ -81,8 +81,7 @@ function Footer() {
             <div className="col-12 col-md-4 mb-4">
               <h6 className="fw-bold mb-3">Contact</h6>
               <p>
-                <i className="fas fa-home me-2 text-warning"></i>12, Rajpalace
-                Complex, Surat (Guj) 395010
+                <i className="fas fa-home me-2 text-warning"></i>UCCC & SPBCBA & SDHGCBCA & IT UDHNA, SURAT 214, Ranchhod Nagar, Udhna - Navsari Main Rd, Opp. Swami Narayan Temple, Udhna, Surat, (Gujarat) 394210
               </p>
               <p>
                 <i className="fas fa-envelope me-2 text-warning"></i>
